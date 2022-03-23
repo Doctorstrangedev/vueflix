@@ -26,7 +26,7 @@ methods:{
   async buscarPelicula(){
     if (this.buscar != "") {   
          try {
-        const data = await fetch(`http://www.omdbapi.com/?apikey=${env.apikey}&i=${this.$route.params.id}&plot=full`);
+        const data = await fetch(`https://www.omdbapi.com/?apikey=${env.apikey}&i=${this.$route.params.id}&plot=full`);
         const getPelicula = await data.json();
         this.movie = getPelicula;
         console.log(this.movie);

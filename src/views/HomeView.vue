@@ -80,7 +80,7 @@ export default {
       if (this.buscar != "") {
         try {
           const data = await fetch(
-            `http://www.omdbapi.com/?apikey=${env.apikey}&s=${this.buscar}`
+            `https://www.omdbapi.com/?apikey=${env.apikey}&s=${this.buscar}`
           );
           const getPeliculas = await data.json();
           this.movies = getPeliculas.Search;
